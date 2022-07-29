@@ -109,4 +109,18 @@ export class StorylineManager {
 		if (this.player != null) this.player.SetVar('invoke_jumptonextslide', value);
 		console.log('invoke_jumptonextslide changed');
 	}
+
+	public invoke_jumptopreviousslide() {
+
+		let value: number = new Date().getTime();
+		if (this.player != null) this.player.SetVar('invoke_jumptopreviousslide', value);
+		console.log('invoke_jumptopreviousslide changed');
+	}
+
+	public invoke_showtoc() {
+
+		let value: number = new Date().getTime();
+		if (this.player != null) this.player.SetVar('invoke_showtoc', value);
+		console.log('invoke_showtoc changed');
+	}
 }

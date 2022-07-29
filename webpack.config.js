@@ -29,7 +29,7 @@ module.exports = {
 				exclude: path.resolve(__dirname, './src/variables.js'),
 			}
 		]
-    },
+	},
 	//devtool: 'inline-source-map',
 	performance: {
 		hints: false,
@@ -79,6 +79,12 @@ module.exports = {
 					noErrorOnMissing: true,
 				},
 				{
+					from: '**/*',
+					context: path.resolve(__dirname, './data/videos'),
+					to: './data/videos',
+					noErrorOnMissing: true,
+				},
+				{
 					from: 'variables.js',
 					context: path.resolve(__dirname, './src'),
 					to: 'variables.js',
@@ -87,5 +93,5 @@ module.exports = {
 				}
 			],
 		})
-	]	
+	]
 }

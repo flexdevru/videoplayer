@@ -13,9 +13,7 @@
     "@pixi/sound": "^4.2.0",
     "gsap": "^3.10.4",
     "json5": "^2.2.1",
-    "jspdf": "^2.5.1",
     "pixi-multistyle-text": "^0.10.0",
-    "pixi-textinput-v5": "^4.0.0-beta.10",
     "pixi.js": "^6.4.2",
     "webfontloader": "^1.6.28"
   },
