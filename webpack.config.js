@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
+const { WebpackPrebuildPlugin } = require('webpack-prebuild-plugin');
 
 //const URL_LOADER_LIMIT = 8192
 
@@ -79,12 +80,6 @@ module.exports = {
 					noErrorOnMissing: true,
 				},
 				{
-					from: '**/*',
-					context: path.resolve(__dirname, './data/videos'),
-					to: './data/videos',
-					noErrorOnMissing: true,
-				},
-				{
 					from: 'variables.js',
 					context: path.resolve(__dirname, './src'),
 					to: 'variables.js',
@@ -92,6 +87,7 @@ module.exports = {
 					info: { minimized: true },
 				}
 			],
-		})
+		}),
+		new WebpackPrebuildPlugin()
 	]
 }
